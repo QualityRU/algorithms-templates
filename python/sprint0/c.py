@@ -1,8 +1,15 @@
 from typing import List, Tuple
 
 def moving_average(arr: List[int], window_size: int) -> List[float]:
-    # Здесь реализация вашего решения
-    pass
+    result = []
+    current_sum = sum(arr[0:window_size])
+    result.append(current_sum / window_size)
+    for i in range(window_size, len(arr)):
+        current_sum -= arr[i - window_size]
+        current_sum += arr[i]
+        current_avg = current_sum / window_size
+        result.append(current_avg)
+    return result 
 
 def read_input() -> Tuple[List[int], int]:
     n = int(input())
