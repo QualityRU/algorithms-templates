@@ -1,4 +1,7 @@
+# Контест ID: 88174768
+
 from typing import List, Tuple
+
 
 def moving_average(arr: List[int], window_size: int) -> List[float]:
     result = []
@@ -9,7 +12,8 @@ def moving_average(arr: List[int], window_size: int) -> List[float]:
         current_sum += arr[i]
         current_avg = current_sum / window_size
         result.append(current_avg)
-    return result 
+    return result
+
 
 def read_input() -> Tuple[List[int], int]:
     n = int(input())
@@ -17,5 +21,6 @@ def read_input() -> Tuple[List[int], int]:
     window_size = int(input())
     return arr, window_size
 
+
 arr, window_size = read_input()
-print(" ".join(map(str, moving_average(arr, window_size))))
+print(' '.join(map(str, moving_average(arr, window_size))))

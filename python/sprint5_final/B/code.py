@@ -5,11 +5,13 @@ from typing import Optional
 
 LOCAL = True
 if LOCAL:
+
     class Node:
         def __init__(self, left=None, right=None, value=0):
             self.right = right
             self.left = left
             self.value = value
+
 else:
     from node import Node
 
