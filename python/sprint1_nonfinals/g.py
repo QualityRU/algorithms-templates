@@ -2,13 +2,7 @@
 
 
 def to_binary(number: int) -> str:
-    result = ''
-
-    while number != 0:
-        result = str(number % 2) + result
-        number //= 2
-
-    return result
+    pass
 
 
 def read_input() -> int:
